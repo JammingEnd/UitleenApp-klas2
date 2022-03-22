@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api classes\" />
+    <Folder Include="scan classing\" />
     <Folder Include="visualisation classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
