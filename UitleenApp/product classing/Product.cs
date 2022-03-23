@@ -2,7 +2,7 @@
 
 namespace UitleenApp.product_classing
 {
-    class Product
+    public class Product
     {
 
         public string Name { get; set; }

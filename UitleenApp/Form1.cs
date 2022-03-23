@@ -12,9 +12,14 @@ namespace UitleenApp
 {
     public partial class Dashboard : Form
     {
+
+        public TextBox BarcodeTextBox;
+
         public Dashboard()
         {
             InitializeComponent();
         }
+
+     
     }
 }
