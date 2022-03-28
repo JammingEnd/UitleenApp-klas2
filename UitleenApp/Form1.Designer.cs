@@ -45,11 +45,9 @@ namespace UitleenApp
             this.TB_Search.Name = "TB_Search";
             this.TB_Search.Size = new System.Drawing.Size(212, 33);
             this.TB_Search.TabIndex = 0;
-            this.TB_Search.TextChanged += new System.EventHandler(this.TB_Search_TextChanged);
+        
             // 
             // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // dataGridView1
             // 
@@ -58,7 +56,6 @@ namespace UitleenApp
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(721, 556);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // listBox1
             // 
@@ -83,7 +80,6 @@ namespace UitleenApp
             this.Name = "Dashboard";
             this.Text = "Uileen Applicatie";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
