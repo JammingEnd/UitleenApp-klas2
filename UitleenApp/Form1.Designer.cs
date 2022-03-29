@@ -45,9 +45,6 @@ namespace UitleenApp
             this.TB_Search.Name = "TB_Search";
             this.TB_Search.Size = new System.Drawing.Size(212, 33);
             this.TB_Search.TabIndex = 0;
-        
-            // 
-            // timer1
             // 
             // dataGridView1
             // 
@@ -59,12 +56,12 @@ namespace UitleenApp
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Cat"});
-            this.listBox1.Location = new System.Drawing.Point(26, 104);
+            this.listBox1.ItemHeight = 19;
+            this.listBox1.Location = new System.Drawing.Point(-2, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 524);
+            this.listBox1.Size = new System.Drawing.Size(120, 669);
             this.listBox1.TabIndex = 2;
             // 
             // Dashboard
