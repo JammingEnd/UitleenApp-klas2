@@ -23,11 +23,22 @@ namespace UitleenApp
             InitializeComponent();
             FocusTextBox();
             AddCatergory();
+            AddItems();
         }
+
+        void AddItems()
+        {
+            foreach (var item in Catergories)
+            {
+                listBox1.Items.Add(item);
+            }
+        }
+
         void AddCatergory()
         {
             Catergories.Add("camera");
             Catergories.Add("lego");
+            
         }
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -39,7 +50,8 @@ namespace UitleenApp
             TB_Search.Focus();
         }
 
-
+      
+        
     }
 
 
