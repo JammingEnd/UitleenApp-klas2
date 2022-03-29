@@ -14,7 +14,7 @@ namespace UitleenApp.product_classing
 
         public string Description { get; set; }
 
-        // public int CategoryID { get; set; }
+        public string remark { get; set; }
 
 
 

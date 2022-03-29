@@ -10,6 +10,7 @@ namespace UitleenApp
     {
         public static void Output(string text)
         {
+         
             System.Diagnostics.Debug.WriteLine(text);
         }
 

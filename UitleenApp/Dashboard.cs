@@ -17,7 +17,7 @@ namespace UitleenApp
     {
 
         public TextBox BarcodeTextBox;
-        public List<string> Catergories = new List<string>();
+        private HashSet<string> catergories = new HashSet<string>();
         private AddScreen addScreen;
         private product_classing.ProductService productService = new product_classing.ProductService();
 
@@ -26,34 +26,52 @@ namespace UitleenApp
             InitializeComponent();
             Init();
             FocusTextBox();
-            AddCatergory();
             AddItems();
+
+            LoadGrid(productService.GetAllProducts());
         }
 
         private void Init()
         {
-            productService.GetAllProducts();
+            productService.IniDB();
         }
 
         void AddItems()
         {
-            foreach (var item in Catergories)
+            
+            foreach (var item in productService.GetAllProducts())
+            {
+                catergories.Add(item.Category);
+                
+            }
+            catergories.Distinct().ToList();
+            
+            foreach (var item in catergories)
             {
                 listBox1.Items.Add(item);
             }
         }
-
-        void AddCatergory()
+        void LoadGrid(List<product_classing.Product> list)
         {
-            Catergories.Add("camera");
-            Catergories.Add("lego");
-            
-        }
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-            MainGrid.DataSource = productService.GetAllProducts();
+            DataTable view = new DataTable();
+            view.Columns.Add("Name");
+            view.Columns.Add("ID");
+            view.Columns.Add("Status");
+            view.Columns.Add("Catergory");
+            view.Columns.Add("remark");
+            foreach (product_classing.Product item in list)
+            {
+                string[] additem = new[] { item.Name, item.ID, item.Status, item.Category, item.remark };
+                view.Rows.Add(additem);
+
+
+
+            }
+            MainGrid.DataSource = view;
         }
 
+     
+        
         public void FocusTextBox()
         {
             TB_Search.Focus();
@@ -69,7 +87,17 @@ namespace UitleenApp
 
         private void Dashboard_Load_1(object sender, EventArgs e)
         {
-            
+           
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            var selectedItem = listBox1.SelectedItem.ToString();
+            List<product_classing.Product> filteredList = new List<product_classing.Product>();
+            filteredList = productService.GetProductsFiltered(selectedItem);
+
+            Debug.Output($"filtered view, querr:{selectedItem}. items in list:{filteredList.Count}");
+            LoadGrid(filteredList);
         }
     }
 

@@ -22,7 +22,8 @@ namespace UitleenApp.product_classing
         {
             List<Product> products = new List<Product>();
 
-            //api call of zaoiets
+            products = DummyDB.productsFromDB;
+            products = products.AsEnumerable().Where(product => product.Category.Contains(catergory)).ToList();
 
 
             return products;
@@ -54,14 +55,16 @@ namespace UitleenApp.product_classing
        private string[] Catergies = new[] { "cam", "lego", "server", "screen" };
        private string nullFilling = "-";
 
+        private int[] productIndexing = new[] {0,0,0,0 };
         public void IniDummyBD()
         {
        
-        Random random = new Random();
+           Random random = new Random();
             for (int i = 0; i < 20; i++)
             {
                 Product newItem = new Product();
                 int itemindex = random.Next(names.Length);
+                AssingIndexing(itemindex);
                 newItem.Name = names[itemindex];
                 AssignProduct(newItem, itemindex);
                 productsFromDB.Add(newItem);
@@ -69,12 +72,39 @@ namespace UitleenApp.product_classing
             Debug.Output($"{productsFromDB.Count} product in the dummy database");
 
         }
+        void AssingIndexing(int index)
+        {
+            int i = 0;
+            if(index == 0)
+            {
+                productIndexing[index]++;
+                return;
+            }
+            if (index == 1)
+            {
+                productIndexing[index]++;
+                return;
+            }
+            if (index == 2)
+            {
+                productIndexing[index]++;
+                return;
+            }
+            if (index == 3)
+            {
+                productIndexing[index]++;
+                return;
+            }
+
+        }
         void AssignProduct(Product item, int Index)
         {
             item.Category = Catergies[Index];
-            item.ID = IDs[Index];
+
+            item.ID = $"{IDs[Index]}{productIndexing[Index]}";
             item.Description = nullFilling;
             item.Status = nullFilling;
+            item.remark = nullFilling;
         }
     }
 }
