@@ -79,5 +79,15 @@ namespace UitleenApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FC_logo_ROC_Friese_Poort {
+            get {
+                object obj = ResourceManager.GetObject("FC-logo-ROC-Friese-Poort", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

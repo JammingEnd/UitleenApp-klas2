@@ -124,4 +124,7 @@
   <data name="1200px-Ic_arrow_drop_up_36px.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200px-Ic_arrow_drop_up_36px.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FC-logo-ROC-Friese-Poort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FC-logo-ROC-Friese-Poort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

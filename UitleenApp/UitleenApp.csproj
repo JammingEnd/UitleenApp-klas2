@@ -100,5 +100,8 @@
   <ItemGroup>
     <None Include="Resources\1200px-Ic_arrow_drop_up_36px.svg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FC-logo-ROC-Friese-Poort.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

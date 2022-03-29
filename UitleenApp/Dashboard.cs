@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UitleenApp.scan_classing;
+using UitleenApp.visualisation_classes;
 
 namespace UitleenApp
 {
@@ -17,6 +18,7 @@ namespace UitleenApp
 
         public TextBox BarcodeTextBox;
         public List<string> Catergories = new List<string>();
+        private AddScreen addScreen;
 
         public Dashboard()
         {
@@ -50,8 +52,18 @@ namespace UitleenApp
             TB_Search.Focus();
         }
 
-      
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addScreen = new AddScreen();
+            addScreen.ShowDialog();
+            this.Close();
+            
+        }
+
+        private void Dashboard_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

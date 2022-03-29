@@ -16,5 +16,10 @@ namespace UitleenApp.visualisation_classes
         {
             InitializeComponent();
         }
+
+        private void AddScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
