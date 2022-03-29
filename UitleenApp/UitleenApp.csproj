@@ -52,6 +52,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Debug.cs" />
     <Compile Include="product classing\Product.cs" />
     <Compile Include="product classing\ProductService.cs" />
     <Compile Include="Program.cs" />

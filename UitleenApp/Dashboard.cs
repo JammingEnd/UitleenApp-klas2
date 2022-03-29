@@ -19,13 +19,20 @@ namespace UitleenApp
         public TextBox BarcodeTextBox;
         public List<string> Catergories = new List<string>();
         private AddScreen addScreen;
+        private product_classing.ProductService productService = new product_classing.ProductService();
 
         public Dashboard()
         {
             InitializeComponent();
+            Init();
             FocusTextBox();
             AddCatergory();
             AddItems();
+        }
+
+        private void Init()
+        {
+            productService.GetAllProducts();
         }
 
         void AddItems()
@@ -44,7 +51,7 @@ namespace UitleenApp
         }
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            MainGrid.DataSource = productService.GetAllProducts();
         }
 
         public void FocusTextBox()
