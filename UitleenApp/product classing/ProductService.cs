@@ -29,14 +29,21 @@ namespace UitleenApp.product_classing
             return products;
         }
 
-        public void UpdateProduct(Product item)
+        public void UpdateProduct(Product product)
         {
 
-
-            //api call update
+           
 
         }
-
+        public Product GetProductByID(string ID)
+        {
+            Product GetItem = DummyDB.productsFromDB.AsEnumerable().Where(product => product.ID.Contains(ID)).FirstOrDefault();
+            
+            GetItem.remark = "boi boi boi";
+            
+            
+            return GetItem;
+        }
 
         public void IniDB()
         {
@@ -74,7 +81,6 @@ namespace UitleenApp.product_classing
         }
         void AssingIndexing(int index)
         {
-            int i = 0;
             if(index == 0)
             {
                 productIndexing[index]++;

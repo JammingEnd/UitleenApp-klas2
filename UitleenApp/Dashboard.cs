@@ -53,21 +53,15 @@ namespace UitleenApp
         }
         void LoadGrid(List<product_classing.Product> list)
         {
-            DataTable view = new DataTable();
-            view.Columns.Add("Name");
-            view.Columns.Add("ID");
-            view.Columns.Add("Status");
-            view.Columns.Add("Catergory");
-            view.Columns.Add("remark");
+            MainGrid.Rows.Clear();
             foreach (product_classing.Product item in list)
             {
                 string[] additem = new[] { item.Name, item.ID, item.Status, item.Category, item.remark };
-                view.Rows.Add(additem);
+                MainGrid.Rows.Add(additem);
 
 
 
             }
-            MainGrid.DataSource = view;
         }
 
      
@@ -81,7 +75,7 @@ namespace UitleenApp
         {
             addScreen = new AddScreen();
             addScreen.ShowDialog();
-            this.Close();
+            
             
         }
 
@@ -99,6 +93,16 @@ namespace UitleenApp
             Debug.Output($"filtered view, querr:{selectedItem}. items in list:{filteredList.Count}");
             LoadGrid(filteredList);
         }
+
+        private void MainGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string GetID = MainGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Debug.Output(GetID);
+            productService.GetProductByID(GetID);
+            LoadGrid(productService.GetAllProducts());
+        }
+
+        
     }
 
 
