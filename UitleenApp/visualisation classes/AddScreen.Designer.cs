@@ -31,18 +31,17 @@ namespace UitleenApp.visualisation_classes
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.createProductCancelBtn = new System.Windows.Forms.Button();
+            this.createProductConfirmBtn = new System.Windows.Forms.Button();
+            this.createProductCategory = new System.Windows.Forms.TextBox();
+            this.createProductDesc = new System.Windows.Forms.TextBox();
+            this.createProduct = new System.Windows.Forms.TextBox();
+            this.createStatusList = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.createProductName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,94 +59,84 @@ namespace UitleenApp.visualisation_classes
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.createProductCancelBtn);
+            this.panel1.Controls.Add(this.createProductConfirmBtn);
+            this.panel1.Controls.Add(this.createProductCategory);
+            this.panel1.Controls.Add(this.createProductDesc);
+            this.panel1.Controls.Add(this.createProduct);
+            this.panel1.Controls.Add(this.createStatusList);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.createProductName);
             this.panel1.Location = new System.Drawing.Point(227, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 478);
             this.panel1.TabIndex = 1;
             // 
-            // textBox5
+            // createProductCancelBtn
             // 
-            this.textBox5.Location = new System.Drawing.Point(283, 68);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(205, 28);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Text = "Vul hier de barcode in:";
+            this.createProductCancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(45)))), ((int)(((byte)(31)))));
+            this.createProductCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(45)))), ((int)(((byte)(31)))));
+            this.createProductCancelBtn.Location = new System.Drawing.Point(21, 434);
+            this.createProductCancelBtn.Name = "createProductCancelBtn";
+            this.createProductCancelBtn.Size = new System.Drawing.Size(114, 32);
+            this.createProductCancelBtn.TabIndex = 10;
+            this.createProductCancelBtn.Text = "Annuleren";
+            this.createProductCancelBtn.UseVisualStyleBackColor = false;
+            this.createProductCancelBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // createProductConfirmBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(45)))), ((int)(((byte)(31)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(45)))), ((int)(((byte)(31)))));
-            this.button2.Location = new System.Drawing.Point(21, 434);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 32);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Annuleren";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.createProductConfirmBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(241)))), ((int)(((byte)(151)))));
+            this.createProductConfirmBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(241)))), ((int)(((byte)(151)))));
+            this.createProductConfirmBtn.FlatAppearance.BorderSize = 4;
+            this.createProductConfirmBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.createProductConfirmBtn.Location = new System.Drawing.Point(335, 434);
+            this.createProductConfirmBtn.Name = "createProductConfirmBtn";
+            this.createProductConfirmBtn.Size = new System.Drawing.Size(114, 32);
+            this.createProductConfirmBtn.TabIndex = 9;
+            this.createProductConfirmBtn.Text = "Aanmaken";
+            this.createProductConfirmBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // createProductCategory
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(241)))), ((int)(((byte)(151)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(241)))), ((int)(((byte)(151)))));
-            this.button1.FlatAppearance.BorderSize = 4;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(335, 434);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 32);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Aanmaken";
-            this.button1.UseVisualStyleBackColor = false;
+            this.createProductCategory.Location = new System.Drawing.Point(298, 173);
+            this.createProductCategory.Multiline = true;
+            this.createProductCategory.Name = "createProductCategory";
+            this.createProductCategory.Size = new System.Drawing.Size(190, 22);
+            this.createProductCategory.TabIndex = 8;
             // 
-            // textBox4
+            // createProductDesc
             // 
-            this.textBox4.Location = new System.Drawing.Point(298, 173);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 22);
-            this.textBox4.TabIndex = 8;
+            this.createProductDesc.Location = new System.Drawing.Point(298, 217);
+            this.createProductDesc.Multiline = true;
+            this.createProductDesc.Name = "createProductDesc";
+            this.createProductDesc.Size = new System.Drawing.Size(190, 96);
+            this.createProductDesc.TabIndex = 7;
             // 
-            // textBox3
+            // createProduct
             // 
-            this.textBox3.Location = new System.Drawing.Point(298, 217);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 96);
-            this.textBox3.TabIndex = 7;
+            this.createProduct.Location = new System.Drawing.Point(298, 335);
+            this.createProduct.Multiline = true;
+            this.createProduct.Name = "createProduct";
+            this.createProduct.Size = new System.Drawing.Size(190, 84);
+            this.createProduct.TabIndex = 6;
             // 
-            // textBox2
+            // createStatusList
             // 
-            this.textBox2.Location = new System.Drawing.Point(298, 335);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 84);
-            this.textBox2.TabIndex = 6;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.createStatusList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.createStatusList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.createStatusList.FormattingEnabled = true;
+            this.createStatusList.Items.AddRange(new object[] {
             "Aanwezig",
             "Afwezig",
             "Niet meer leverbaar"});
-            this.comboBox1.Location = new System.Drawing.Point(298, 135);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.createStatusList.Location = new System.Drawing.Point(298, 135);
+            this.createStatusList.Name = "createStatusList";
+            this.createStatusList.Size = new System.Drawing.Size(121, 21);
+            this.createStatusList.TabIndex = 5;
             // 
             // label4
             // 
@@ -189,14 +178,14 @@ namespace UitleenApp.visualisation_classes
             this.label1.TabIndex = 1;
             this.label1.Text = "Status:";
             // 
-            // textBox1
+            // createProductName
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 20);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(205, 28);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Vul hier de naam in:";
+            this.createProductName.Location = new System.Drawing.Point(283, 20);
+            this.createProductName.Multiline = true;
+            this.createProductName.Name = "createProductName";
+            this.createProductName.Size = new System.Drawing.Size(205, 28);
+            this.createProductName.TabIndex = 0;
+            this.createProductName.Text = "Vul hier de naam in:";
             // 
             // AddScreen
             // 
@@ -224,13 +213,12 @@ namespace UitleenApp.visualisation_classes
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox createProductName;
+        private System.Windows.Forms.TextBox createProductCategory;
+        private System.Windows.Forms.TextBox createProductDesc;
+        private System.Windows.Forms.TextBox createProduct;
+        private System.Windows.Forms.ComboBox createStatusList;
+        private System.Windows.Forms.Button createProductCancelBtn;
+        private System.Windows.Forms.Button createProductConfirmBtn;
     }
 }
