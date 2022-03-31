@@ -42,6 +42,8 @@ namespace UitleenApp.visualisation_classes
             newItem.Name = createProductName.Text;
             newItem.Status = createStatusList.Text;
             newItem.Category = createProductCategory.Text;
+            generateID(newItem.Category);
+
             newItem.Description = createProductDesc.Text;
             newItem.remark = createRemark.Text;
 
@@ -50,10 +52,14 @@ namespace UitleenApp.visualisation_classes
             this.Close();
             
         }
-
+        void generateID(string catergory)
+        {
+            GenerateID generateID = new GenerateID(productService);
+            generateID.GenerateIDFunc(catergory);
+        }
         void CheckForMissing()
         {
-            if ()
+           // if ()
         }
     }
 }

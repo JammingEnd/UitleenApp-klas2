@@ -53,6 +53,7 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Debug.cs" />
+    <Compile Include="product classing\GenerateID.cs" />
     <Compile Include="product classing\Product.cs" />
     <Compile Include="product classing\ProductService.cs" />
     <Compile Include="Program.cs" />
