@@ -44,6 +44,10 @@ namespace UitleenApp.product_classing
             
             return GetItem;
         }
+        public void PostProduct(Product item)
+        {
+            DummyDB.productsFromDB.Add(item);
+        }
 
         public void IniDB()
         {
