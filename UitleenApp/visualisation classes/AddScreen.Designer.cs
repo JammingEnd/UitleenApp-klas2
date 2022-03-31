@@ -35,7 +35,7 @@ namespace UitleenApp.visualisation_classes
             this.createProductConfirmBtn = new System.Windows.Forms.Button();
             this.createProductCategory = new System.Windows.Forms.TextBox();
             this.createProductDesc = new System.Windows.Forms.TextBox();
-            this.createProduct = new System.Windows.Forms.TextBox();
+            this.createRemark = new System.Windows.Forms.TextBox();
             this.createStatusList = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@ namespace UitleenApp.visualisation_classes
             this.panel1.Controls.Add(this.createProductConfirmBtn);
             this.panel1.Controls.Add(this.createProductCategory);
             this.panel1.Controls.Add(this.createProductDesc);
-            this.panel1.Controls.Add(this.createProduct);
+            this.panel1.Controls.Add(this.createRemark);
             this.panel1.Controls.Add(this.createStatusList);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -85,7 +85,6 @@ namespace UitleenApp.visualisation_classes
             this.createProductCancelBtn.TabIndex = 10;
             this.createProductCancelBtn.Text = "Annuleren";
             this.createProductCancelBtn.UseVisualStyleBackColor = false;
-            this.createProductCancelBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // createProductConfirmBtn
             // 
@@ -99,6 +98,7 @@ namespace UitleenApp.visualisation_classes
             this.createProductConfirmBtn.TabIndex = 9;
             this.createProductConfirmBtn.Text = "Aanmaken";
             this.createProductConfirmBtn.UseVisualStyleBackColor = false;
+            this.createProductConfirmBtn.Click += new System.EventHandler(this.createProductConfirmBtn_Click);
             // 
             // createProductCategory
             // 
@@ -116,13 +116,13 @@ namespace UitleenApp.visualisation_classes
             this.createProductDesc.Size = new System.Drawing.Size(190, 96);
             this.createProductDesc.TabIndex = 7;
             // 
-            // createProduct
+            // createRemark
             // 
-            this.createProduct.Location = new System.Drawing.Point(298, 335);
-            this.createProduct.Multiline = true;
-            this.createProduct.Name = "createProduct";
-            this.createProduct.Size = new System.Drawing.Size(190, 84);
-            this.createProduct.TabIndex = 6;
+            this.createRemark.Location = new System.Drawing.Point(298, 335);
+            this.createRemark.Multiline = true;
+            this.createRemark.Name = "createRemark";
+            this.createRemark.Size = new System.Drawing.Size(190, 84);
+            this.createRemark.TabIndex = 6;
             // 
             // createStatusList
             // 
@@ -144,7 +144,7 @@ namespace UitleenApp.visualisation_classes
             this.label4.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 16);
+            this.label4.Size = new System.Drawing.Size(107, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Categorie:";
             // 
@@ -154,7 +154,7 @@ namespace UitleenApp.visualisation_classes
             this.label3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 16);
+            this.label3.Size = new System.Drawing.Size(137, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Beschrijving:";
             // 
@@ -164,7 +164,7 @@ namespace UitleenApp.visualisation_classes
             this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 16);
+            this.label2.Size = new System.Drawing.Size(127, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Opmerkingen:";
             // 
@@ -174,7 +174,7 @@ namespace UitleenApp.visualisation_classes
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status:";
             // 
@@ -216,7 +216,7 @@ namespace UitleenApp.visualisation_classes
         private System.Windows.Forms.TextBox createProductName;
         private System.Windows.Forms.TextBox createProductCategory;
         private System.Windows.Forms.TextBox createProductDesc;
-        private System.Windows.Forms.TextBox createProduct;
+        private System.Windows.Forms.TextBox createRemark;
         private System.Windows.Forms.ComboBox createStatusList;
         private System.Windows.Forms.Button createProductCancelBtn;
         private System.Windows.Forms.Button createProductConfirmBtn;

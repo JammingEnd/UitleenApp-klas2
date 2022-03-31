@@ -51,7 +51,7 @@ namespace UitleenApp
                 listBox1.Items.Add(item);
             }
         }
-        void LoadGrid(List<product_classing.Product> list)
+        public void LoadGrid(List<product_classing.Product> list)
         {
             MainGrid.Rows.Clear();
             foreach (product_classing.Product item in list)
@@ -73,7 +73,7 @@ namespace UitleenApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addScreen = new AddScreen();
+            addScreen = new AddScreen(productService, this);
             addScreen.ShowDialog();
             
             

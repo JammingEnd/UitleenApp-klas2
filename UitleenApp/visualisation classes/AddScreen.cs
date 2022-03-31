@@ -13,8 +13,13 @@ namespace UitleenApp.visualisation_classes
 {
     public partial class AddScreen : Form
     {
-        public AddScreen()
+        private string nullFilling = "-";
+        private ProductService productService;
+        private Dashboard dashboard;
+        public AddScreen(ProductService item, Dashboard dashboarditem)
         {
+            productService = item;
+            dashboard = dashboarditem;
             InitializeComponent();
         }
 
@@ -23,9 +28,32 @@ namespace UitleenApp.visualisation_classes
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void createProductConfirmBtn_Click(object sender, EventArgs e)
         {
+            Product newItem = new Product();
+            if (createProductDesc.Text == "")
+            {
+                newItem.Description = nullFilling;
+            }
+            if (createRemark.Text == "")
+            {
+                newItem.remark = nullFilling;
+            }
+            newItem.Name = createProductName.Text;
+            newItem.Status = createStatusList.Text;
+            newItem.Category = createProductCategory.Text;
+            newItem.Description = createProductDesc.Text;
+            newItem.remark = createRemark.Text;
 
+            productService.PostProduct(newItem);
+            dashboard.LoadGrid(productService.GetAllProducts());
+            this.Close();
+            
+        }
+
+        void CheckForMissing()
+        {
+            if ()
         }
     }
 }
