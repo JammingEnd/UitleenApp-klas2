@@ -96,6 +96,10 @@ namespace UitleenApp
 
         private void MainGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex == -1)
+            {
+                return;
+            }
             string GetID = MainGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             Debug.Output(GetID);
             productService.GetProductByID(GetID);
