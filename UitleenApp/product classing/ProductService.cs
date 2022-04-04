@@ -31,16 +31,19 @@ namespace UitleenApp.product_classing
 
         public void UpdateProduct(Product product)
         {
-
-           
-
+            Debug.Output(product.ID);
+            Product updateItem = DummyDB.productsFromDB.AsEnumerable().Where(Qproduct => Qproduct.ID.Contains(product.ID)).FirstOrDefault();
+            updateItem.Name = product.Name;
+            updateItem.Status = product.Status;
+            updateItem.Category = product.Category;
+            updateItem.Description = product.Description;
+            updateItem.remark = product.remark;
+            updateItem.ID = product.ID;
+            Debug.Output($"updated item with ID:{updateItem.ID}");
         }
         public Product GetProductByID(string ID)
         {
-            Product GetItem = DummyDB.productsFromDB.AsEnumerable().Where(product => product.ID.Contains(ID)).FirstOrDefault();
-            
-            GetItem.remark = "boi boi boi";
-            
+            Product GetItem = DummyDB.productsFromDB.AsEnumerable().Where(product => product.ID.Contains(ID)).FirstOrDefault();            
             
             return GetItem;
         }

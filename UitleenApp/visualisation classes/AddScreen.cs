@@ -16,10 +16,12 @@ namespace UitleenApp.visualisation_classes
         private string nullFilling = "-";
         private ProductService productService;
         private Dashboard dashboard;
+        private GenerateID generator;
         public AddScreen(ProductService item, Dashboard dashboarditem)
         {
             productService = item;
             dashboard = dashboarditem;
+            generator = new GenerateID(item);
             InitializeComponent();
         }
 
@@ -42,18 +44,20 @@ namespace UitleenApp.visualisation_classes
             newItem.Name = createProductName.Text;
             newItem.Status = createStatusList.Text;
             newItem.Category = createProductCategory.Text;
+            newItem.ID = generator.GenerateIDFunc(newItem.Category, dashboard.catergories);
+
             newItem.Description = createProductDesc.Text;
             newItem.remark = createRemark.Text;
 
             productService.PostProduct(newItem);
             dashboard.LoadGrid(productService.GetAllProducts());
+           
             this.Close();
             
         }
 
-        void CheckForMissing()
-        {
         
-        }
+        
     }
+
 }

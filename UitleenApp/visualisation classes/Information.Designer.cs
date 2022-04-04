@@ -29,41 +29,51 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createProductCancelBtn = new System.Windows.Forms.Button();
-            this.createProductCategory = new System.Windows.Forms.TextBox();
-            this.createProductDesc = new System.Windows.Forms.TextBox();
-            this.createRemark = new System.Windows.Forms.TextBox();
-            this.createStatusList = new System.Windows.Forms.ComboBox();
+            this.editProductCategory = new System.Windows.Forms.TextBox();
+            this.editProductDesc = new System.Windows.Forms.TextBox();
+            this.editRemark = new System.Windows.Forms.TextBox();
+            this.EditStatusList = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.createProductName = new System.Windows.Forms.TextBox();
+            this.EditProductName = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.saveBtn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.createProductCancelBtn);
-            this.panel1.Controls.Add(this.createProductCategory);
-            this.panel1.Controls.Add(this.createProductDesc);
-            this.panel1.Controls.Add(this.createRemark);
-            this.panel1.Controls.Add(this.createStatusList);
+            this.panel1.Controls.Add(this.editProductCategory);
+            this.panel1.Controls.Add(this.editProductDesc);
+            this.panel1.Controls.Add(this.editRemark);
+            this.panel1.Controls.Add(this.EditStatusList);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.createProductName);
+            this.panel1.Controls.Add(this.EditProductName);
             this.panel1.Location = new System.Drawing.Point(233, 178);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 478);
             this.panel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(559, 218);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 153);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // createProductCancelBtn
             // 
@@ -76,43 +86,43 @@
             this.createProductCancelBtn.Text = "Verwijderen";
             this.createProductCancelBtn.UseVisualStyleBackColor = false;
             // 
-            // createProductCategory
+            // editProductCategory
             // 
-            this.createProductCategory.Location = new System.Drawing.Point(298, 173);
-            this.createProductCategory.Multiline = true;
-            this.createProductCategory.Name = "createProductCategory";
-            this.createProductCategory.Size = new System.Drawing.Size(190, 22);
-            this.createProductCategory.TabIndex = 8;
+            this.editProductCategory.Location = new System.Drawing.Point(298, 173);
+            this.editProductCategory.Multiline = true;
+            this.editProductCategory.Name = "editProductCategory";
+            this.editProductCategory.Size = new System.Drawing.Size(190, 22);
+            this.editProductCategory.TabIndex = 8;
             // 
-            // createProductDesc
+            // editProductDesc
             // 
-            this.createProductDesc.Location = new System.Drawing.Point(298, 217);
-            this.createProductDesc.Multiline = true;
-            this.createProductDesc.Name = "createProductDesc";
-            this.createProductDesc.Size = new System.Drawing.Size(190, 96);
-            this.createProductDesc.TabIndex = 7;
+            this.editProductDesc.Location = new System.Drawing.Point(298, 217);
+            this.editProductDesc.Multiline = true;
+            this.editProductDesc.Name = "editProductDesc";
+            this.editProductDesc.Size = new System.Drawing.Size(190, 96);
+            this.editProductDesc.TabIndex = 7;
             // 
-            // createRemark
+            // editRemark
             // 
-            this.createRemark.Location = new System.Drawing.Point(298, 335);
-            this.createRemark.Multiline = true;
-            this.createRemark.Name = "createRemark";
-            this.createRemark.Size = new System.Drawing.Size(190, 84);
-            this.createRemark.TabIndex = 6;
+            this.editRemark.Location = new System.Drawing.Point(298, 335);
+            this.editRemark.Multiline = true;
+            this.editRemark.Name = "editRemark";
+            this.editRemark.Size = new System.Drawing.Size(190, 84);
+            this.editRemark.TabIndex = 6;
             // 
-            // createStatusList
+            // EditStatusList
             // 
-            this.createStatusList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.createStatusList.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.createStatusList.FormattingEnabled = true;
-            this.createStatusList.Items.AddRange(new object[] {
+            this.EditStatusList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EditStatusList.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.EditStatusList.FormattingEnabled = true;
+            this.EditStatusList.Items.AddRange(new object[] {
             "Aanwezig",
             "Afwezig",
             "Niet meer leverbaar"});
-            this.createStatusList.Location = new System.Drawing.Point(298, 135);
-            this.createStatusList.Name = "createStatusList";
-            this.createStatusList.Size = new System.Drawing.Size(121, 21);
-            this.createStatusList.TabIndex = 5;
+            this.EditStatusList.Location = new System.Drawing.Point(298, 135);
+            this.EditStatusList.Name = "EditStatusList";
+            this.EditStatusList.Size = new System.Drawing.Size(121, 21);
+            this.EditStatusList.TabIndex = 5;
             // 
             // label4
             // 
@@ -120,7 +130,7 @@
             this.label4.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Categorie:";
             // 
@@ -130,7 +140,7 @@
             this.label3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 16);
+            this.label3.Size = new System.Drawing.Size(138, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Beschrijving:";
             // 
@@ -140,7 +150,7 @@
             this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 16);
+            this.label2.Size = new System.Drawing.Size(128, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Opmerkingen:";
             // 
@@ -150,17 +160,18 @@
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status:";
             // 
-            // createProductName
+            // EditProductName
             // 
-            this.createProductName.Location = new System.Drawing.Point(283, 20);
-            this.createProductName.Multiline = true;
-            this.createProductName.Name = "createProductName";
-            this.createProductName.Size = new System.Drawing.Size(205, 28);
-            this.createProductName.TabIndex = 0;
+            this.EditProductName.Location = new System.Drawing.Point(283, 20);
+            this.EditProductName.Multiline = true;
+            this.EditProductName.Name = "EditProductName";
+            this.EditProductName.Size = new System.Drawing.Size(205, 28);
+            this.EditProductName.TabIndex = 0;
+            this.EditProductName.TextChanged += new System.EventHandler(this.createProductName_TextChanged);
             // 
             // pictureBox2
             // 
@@ -172,13 +183,15 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // saveBtn
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(559, 218);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 153);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.saveBtn.Location = new System.Drawing.Point(659, 443);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(75, 23);
+            this.saveBtn.TabIndex = 12;
+            this.saveBtn.Text = "Opslaan";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // Information
             // 
@@ -192,8 +205,8 @@
             this.Text = "Information";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,15 +216,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button createProductCancelBtn;
-        private System.Windows.Forms.TextBox createProductCategory;
-        private System.Windows.Forms.TextBox createProductDesc;
-        private System.Windows.Forms.TextBox createRemark;
-        private System.Windows.Forms.ComboBox createStatusList;
+        private System.Windows.Forms.TextBox editProductCategory;
+        private System.Windows.Forms.TextBox editProductDesc;
+        private System.Windows.Forms.TextBox editRemark;
+        private System.Windows.Forms.ComboBox EditStatusList;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox createProductName;
+        private System.Windows.Forms.TextBox EditProductName;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button saveBtn;
     }
 }

@@ -17,8 +17,9 @@ namespace UitleenApp
     {
 
         public TextBox BarcodeTextBox;
-        private HashSet<string> catergories = new HashSet<string>();
+        public HashSet<string> catergories = new HashSet<string>();
         private AddScreen addScreen;
+        private Information infoScreen;
         private product_classing.ProductService productService = new product_classing.ProductService();
 
         public Dashboard()
@@ -26,7 +27,6 @@ namespace UitleenApp
             InitializeComponent();
             Init();
             FocusTextBox();
-            AddItems();
 
             LoadGrid(productService.GetAllProducts());
         }
@@ -38,7 +38,7 @@ namespace UitleenApp
 
         void AddItems()
         {
-            
+            listBox1.Items.Clear();
             foreach (var item in productService.GetAllProducts())
             {
                 catergories.Add(item.Category);
@@ -62,6 +62,7 @@ namespace UitleenApp
 
 
             }
+            AddItems();
         }
 
      
@@ -86,6 +87,11 @@ namespace UitleenApp
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
+            if(listBox1.SelectedItem == null)
+            {
+                LoadGrid(productService.GetAllProducts());
+                return;
+            }
             var selectedItem = listBox1.SelectedItem.ToString();
             List<product_classing.Product> filteredList = new List<product_classing.Product>();
             filteredList = productService.GetProductsFiltered(selectedItem);
@@ -102,11 +108,13 @@ namespace UitleenApp
             }
             string GetID = MainGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             Debug.Output(GetID);
-            productService.GetProductByID(GetID);
+            product_classing.Product newProduct = productService.GetProductByID(GetID);
+            infoScreen = new Information(newProduct, this, productService);
+            infoScreen.ShowDialog();
             LoadGrid(productService.GetAllProducts());
         }
 
-        
+       
     }
 
 

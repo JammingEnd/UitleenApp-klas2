@@ -65,6 +65,12 @@
     <Compile Include="visualisation classes\AddScreen.Designer.cs">
       <DependentUpon>AddScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="visualisation classes\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visualisation classes\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +86,9 @@
     </Compile>
     <EmbeddedResource Include="visualisation classes\AddScreen.resx">
       <DependentUpon>AddScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visualisation classes\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
