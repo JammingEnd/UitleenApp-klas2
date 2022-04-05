@@ -29,7 +29,6 @@ namespace UitleenApp.visualisation_classes
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.createProductCancelBtn = new System.Windows.Forms.Button();
             this.createProductConfirmBtn = new System.Windows.Forms.Button();
@@ -42,19 +41,10 @@ namespace UitleenApp.visualisation_classes
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.createProductName = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UitleenApp.Properties.Resources.FC_logo_ROC_Friese_Poort;
-            this.pictureBox1.Location = new System.Drawing.Point(456, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -126,6 +116,7 @@ namespace UitleenApp.visualisation_classes
             // 
             // createStatusList
             // 
+            this.createStatusList.BackColor = System.Drawing.SystemColors.ControlDark;
             this.createStatusList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.createStatusList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.createStatusList.FormattingEnabled = true;
@@ -144,7 +135,7 @@ namespace UitleenApp.visualisation_classes
             this.label4.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Categorie:";
             // 
@@ -154,7 +145,7 @@ namespace UitleenApp.visualisation_classes
             this.label3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 16);
+            this.label3.Size = new System.Drawing.Size(138, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Beschrijving:";
             // 
@@ -164,7 +155,7 @@ namespace UitleenApp.visualisation_classes
             this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 16);
+            this.label2.Size = new System.Drawing.Size(128, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Opmerkingen:";
             // 
@@ -174,7 +165,7 @@ namespace UitleenApp.visualisation_classes
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status:";
             // 
@@ -187,6 +178,16 @@ namespace UitleenApp.visualisation_classes
             this.createProductName.TabIndex = 0;
             this.createProductName.Text = "Vul hier de naam in:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UitleenApp.Properties.Resources.FC_logo_ROC_Friese_Poort;
+            this.pictureBox1.Location = new System.Drawing.Point(456, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(279, 122);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // AddScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,9 +199,9 @@ namespace UitleenApp.visualisation_classes
             this.Name = "AddScreen";
             this.Text = "AddScreen";
             this.Load += new System.EventHandler(this.AddScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -115,5 +115,11 @@
   <ItemGroup>
     <None Include="Resources\FC-logo-ROC-Friese-Poort.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3otno6 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gbutton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

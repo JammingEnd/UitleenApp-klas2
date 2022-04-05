@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.createProductCancelBtn = new System.Windows.Forms.Button();
             this.editProductCategory = new System.Windows.Forms.TextBox();
             this.editProductDesc = new System.Windows.Forms.TextBox();
@@ -40,8 +39,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EditProductName = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.saveBtn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.createProductCancelBtn);
@@ -66,14 +68,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 478);
             this.panel1.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(559, 218);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 153);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
             // 
             // createProductCancelBtn
             // 
@@ -112,6 +106,7 @@
             // 
             // EditStatusList
             // 
+            this.EditStatusList.BackColor = System.Drawing.SystemColors.ControlDark;
             this.EditStatusList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EditStatusList.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.EditStatusList.FormattingEnabled = true;
@@ -173,6 +168,25 @@
             this.EditProductName.TabIndex = 0;
             this.EditProductName.TextChanged += new System.EventHandler(this.createProductName_TextChanged);
             // 
+            // saveBtn
+            // 
+            this.saveBtn.BackColor = System.Drawing.Color.PaleGreen;
+            this.saveBtn.Location = new System.Drawing.Point(312, 434);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(154, 32);
+            this.saveBtn.TabIndex = 12;
+            this.saveBtn.Text = "Opslaan";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(559, 218);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 153);
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::UitleenApp.Properties.Resources.FC_logo_ROC_Friese_Poort;
@@ -183,15 +197,16 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // saveBtn
+            // label5
             // 
-            this.saveBtn.Location = new System.Drawing.Point(659, 443);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(75, 23);
-            this.saveBtn.TabIndex = 12;
-            this.saveBtn.Text = "Opslaan";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(134, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Naam:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Information
             // 
@@ -227,5 +242,6 @@
         private System.Windows.Forms.TextBox EditProductName;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Label label5;
     }
 }
