@@ -141,8 +141,11 @@ namespace UitleenApp
                     {
                         //error message
                         Debug.Output(searchResult.error);
+                        TB_Search.Text = "";
                         return;
                     }
+                    TB_Search.Text = "";
+
                     infoScreen = new Information(searchResult.Result, this, productService);
                     infoScreen.ShowDialog();
                 }

@@ -51,7 +51,7 @@ namespace UitleenApp.visualisation_classes
 
             productService.PostProduct(newItem);
             dashboard.LoadGrid(productService.GetAllProducts());
-           
+            
             this.Close();
             
         }
