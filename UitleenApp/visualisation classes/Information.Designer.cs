@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.barcodeBox = new System.Windows.Forms.PictureBox();
             this.createProductCancelBtn = new System.Windows.Forms.Button();
             this.editProductCategory = new System.Windows.Forms.TextBox();
             this.editProductDesc = new System.Windows.Forms.TextBox();
@@ -39,12 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.EditProductName = new System.Windows.Forms.TextBox();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcodeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.saveBtn);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.barcodeBox);
             this.panel1.Controls.Add(this.createProductCancelBtn);
             this.panel1.Controls.Add(this.editProductCategory);
             this.panel1.Controls.Add(this.editProductDesc);
@@ -68,6 +68,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 478);
             this.panel1.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(134, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 16);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Naam:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.BackColor = System.Drawing.Color.PaleGreen;
+            this.saveBtn.Location = new System.Drawing.Point(312, 434);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(154, 32);
+            this.saveBtn.TabIndex = 12;
+            this.saveBtn.Text = "Opslaan";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // barcodeBox
+            // 
+            this.barcodeBox.Location = new System.Drawing.Point(546, 218);
+            this.barcodeBox.Name = "barcodeBox";
+            this.barcodeBox.Size = new System.Drawing.Size(171, 153);
+            this.barcodeBox.TabIndex = 11;
+            this.barcodeBox.TabStop = false;
+            this.barcodeBox.Click += new System.EventHandler(this.barcodeBox_Click);
             // 
             // createProductCancelBtn
             // 
@@ -168,25 +199,6 @@
             this.EditProductName.TabIndex = 0;
             this.EditProductName.TextChanged += new System.EventHandler(this.createProductName_TextChanged);
             // 
-            // saveBtn
-            // 
-            this.saveBtn.BackColor = System.Drawing.Color.PaleGreen;
-            this.saveBtn.Location = new System.Drawing.Point(312, 434);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(154, 32);
-            this.saveBtn.TabIndex = 12;
-            this.saveBtn.Text = "Opslaan";
-            this.saveBtn.UseVisualStyleBackColor = false;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(559, 218);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 153);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::UitleenApp.Properties.Resources.FC_logo_ROC_Friese_Poort;
@@ -196,17 +208,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(134, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 16);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Naam:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Information
             // 
@@ -220,7 +221,7 @@
             this.Text = "Information";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcodeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -229,7 +230,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox barcodeBox;
         private System.Windows.Forms.Button createProductCancelBtn;
         private System.Windows.Forms.TextBox editProductCategory;
         private System.Windows.Forms.TextBox editProductDesc;

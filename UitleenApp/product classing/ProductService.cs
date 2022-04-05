@@ -24,8 +24,6 @@ namespace UitleenApp.product_classing
 
             products = DummyDB.productsFromDB;
             products = products.AsEnumerable().Where(product => product.Category.Contains(catergory)).ToList();
-
-
             return products;
         }
 
@@ -41,11 +39,21 @@ namespace UitleenApp.product_classing
             updateItem.ID = product.ID;
             Debug.Output($"updated item with ID:{updateItem.ID}");
         }
-        public Product GetProductByID(string ID)
+        public SearchResult<Product> GetProductByID(string ID)
         {
-            Product GetItem = DummyDB.productsFromDB.AsEnumerable().Where(product => product.ID.Contains(ID)).FirstOrDefault();            
-            
-            return GetItem;
+            SearchResult<Product> searchResult = new SearchResult<Product>();
+
+            Product GetItem = DummyDB.productsFromDB.AsEnumerable().Where(product => product.ID.Contains(ID)).FirstOrDefault();
+            if(GetItem == null)
+            {
+                searchResult.error = $"no item found with ID: {ID}";
+                searchResult.Result = null;
+                return searchResult;
+            }
+            searchResult.Result = GetItem;
+            searchResult.error = "";
+
+            return searchResult;
         }
         public void PostProduct(Product item)
         {
