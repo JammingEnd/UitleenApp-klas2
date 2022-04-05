@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UitleenApp.scan_classing;
+using UitleenApp.product_classing;
 using UitleenApp.visualisation_classes;
 
 namespace UitleenApp
 {
-    
+
     public partial class Dashboard : Form
     {
+
+
 
         public TextBox BarcodeTextBox;
         public HashSet<string> catergories = new HashSet<string>();
@@ -27,10 +29,15 @@ namespace UitleenApp
             InitializeComponent();
             Init();
             FocusTextBox();
-
+            GetEnter();
             LoadGrid(productService.GetAllProducts());
-        }
 
+        }
+        void GetEnter()
+        {
+            this.TB_Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckEnterKeyPress);
+
+        }
         private void Init()
         {
             productService.IniDB();
@@ -42,10 +49,10 @@ namespace UitleenApp
             foreach (var item in productService.GetAllProducts())
             {
                 catergories.Add(item.Category);
-                
+
             }
             catergories.Distinct().ToList();
-            
+
             foreach (var item in catergories)
             {
                 listBox1.Items.Add(item);
@@ -65,29 +72,29 @@ namespace UitleenApp
             AddItems();
         }
 
-     
-        
+
+
         public void FocusTextBox()
         {
             TB_Search.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox_add_Click(object sender, EventArgs e)
         {
             addScreen = new AddScreen(productService, this);
             addScreen.ShowDialog();
-            
-            
+
+
         }
 
         private void Dashboard_Load_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            if(listBox1.SelectedItem == null)
+            if (listBox1.SelectedItem == null)
             {
                 LoadGrid(productService.GetAllProducts());
                 return;
@@ -102,22 +109,47 @@ namespace UitleenApp
 
         private void MainGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex == -1)
+            if (e.RowIndex == -1)
             {
                 return;
             }
             string GetID = MainGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             Debug.Output(GetID);
-            product_classing.Product newProduct = productService.GetProductByID(GetID);
-            infoScreen = new Information(newProduct, this, productService);
+            SearchResult<Product> searchResult = new SearchResult<Product>();
+
+            searchResult = productService.GetProductByID(GetID);
+            infoScreen = new Information(searchResult.Result, this, productService);
             infoScreen.ShowDialog();
             LoadGrid(productService.GetAllProducts());
         }
 
-        private void pictureBox_add_Click(object sender, EventArgs e)
+        private void TB_Search_TextChanged(object sender, EventArgs e)
         {
-            addScreen = new AddScreen(productService, this);
-            addScreen.ShowDialog();
+        }
+        private void CheckEnterKeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+
+            {
+                if (TB_Search.Text != "" || TB_Search.Text != null)
+                {
+
+                    SearchResult<Product> searchResult = new SearchResult<Product>();
+
+                    searchResult = productService.GetProductByID(TB_Search.Text);
+                    if (searchResult.error != "")
+                    {
+                        //error message
+                        Debug.Output(searchResult.error);
+                        TB_Search.Text = "";
+                        return;
+                    }
+                    TB_Search.Text = "";
+
+                    infoScreen = new Information(searchResult.Result, this, productService);
+                    infoScreen.ShowDialog();
+                }
+            }
         }
     }
 

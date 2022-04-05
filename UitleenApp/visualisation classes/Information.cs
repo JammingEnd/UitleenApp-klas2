@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace UitleenApp.visualisation_classes
         private Dashboard dashboard;
         private ProductService productService;
         private Product product;
+        private object e;
+
         public Information(Product item, Dashboard _dashboard, ProductService service)
         {
             InitializeComponent();
@@ -32,7 +35,7 @@ namespace UitleenApp.visualisation_classes
             Image img = b.Encode(BarcodeLib.TYPE.CODE128, item.ID, Color.Black, Color.White, barcodeBox.Width, barcodeBox.Height);
             barcodeBox.Image = img;
         }
-        
+
         private void createProductName_TextChanged(object sender, EventArgs e)
         {
 
@@ -57,7 +60,7 @@ namespace UitleenApp.visualisation_classes
             productService.UpdateProduct(newItem);
             dashboard.LoadGrid(productService.GetAllProducts());
             this.Close();
-            
+
 
         }
 
@@ -71,6 +74,28 @@ namespace UitleenApp.visualisation_classes
 
             Debug.SaveImageCapture(barcodeBox.Image);
         }
-       
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            PrintDialog pd = new PrintDialog();
+            System.Drawing.Printing.PrintDocument doc = new PrintDocument();
+            doc.PrintPage += Doc_PrintPage;
+            pd.Document = doc;
+            if (pd.ShowDialog() == DialogResult.OK)
+            {
+                doc.Print();
+            }
+
+        }
+
+        private void Doc_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(barcodeBox.Width, barcodeBox.Height);
+            barcodeBox.DrawToBitmap(bm, new Rectangle(0, 0, barcodeBox.Width, barcodeBox.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+            bm.Dispose();
+        }
+
+      
     }
 }
