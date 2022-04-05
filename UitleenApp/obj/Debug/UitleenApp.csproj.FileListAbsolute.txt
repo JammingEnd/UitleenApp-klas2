@@ -33,3 +33,4 @@ C:\Users\jaime\source\repos\UitleenApp-klas2\UitleenApp\obj\Debug\UitleenApp.csp
 C:\Users\jaime\source\repos\UitleenApp-klas2\UitleenApp\obj\Debug\UitleenApp.exe
 C:\Users\jaime\source\repos\UitleenApp-klas2\UitleenApp\obj\Debug\UitleenApp.pdb
 C:\Users\jaime\source\repos\UitleenApp-klas2\UitleenApp\obj\Debug\UitleenApp.visualisation_classes.Information.resources
+D:\source\repos\JammingEnd\UitleenApp-klas2\UitleenApp\obj\Debug\UitleenApp.visualisation_classes.Information.resources
