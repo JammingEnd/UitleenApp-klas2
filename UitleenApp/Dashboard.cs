@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UitleenApp.scan_classing;
+using UitleenApp.product_classing;
 using UitleenApp.visualisation_classes;
 
 namespace UitleenApp
@@ -15,6 +15,8 @@ namespace UitleenApp
     
     public partial class Dashboard : Form
     {
+        
+
 
         public TextBox BarcodeTextBox;
         public HashSet<string> catergories = new HashSet<string>();
@@ -27,10 +29,15 @@ namespace UitleenApp
             InitializeComponent();
             Init();
             FocusTextBox();
-
+            GetEnter();
             LoadGrid(productService.GetAllProducts());
+            
         }
+       void GetEnter()
+        {
+            this.TB_Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckEnterKeyPress);
 
+        }
         private void Init()
         {
             productService.IniDB();
@@ -108,13 +115,39 @@ namespace UitleenApp
             }
             string GetID = MainGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
             Debug.Output(GetID);
-            product_classing.Product newProduct = productService.GetProductByID(GetID);
-            infoScreen = new Information(newProduct, this, productService);
+            SearchResult<Product> searchResult = new SearchResult<Product>();
+
+            searchResult = productService.GetProductByID(GetID); 
+            infoScreen = new Information(searchResult.Result, this, productService);
             infoScreen.ShowDialog();
             LoadGrid(productService.GetAllProducts());
         }
 
-       
+        private void TB_Search_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void CheckEnterKeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+
+            {
+                if(TB_Search.Text != "" || TB_Search.Text != null)
+                {
+
+                    SearchResult<Product> searchResult = new SearchResult<Product>();
+
+                    searchResult = productService.GetProductByID(TB_Search.Text);
+                    if(searchResult.error != "")
+                    {
+                        //error message
+                        Debug.Output(searchResult.error);
+                        return;
+                    }
+                    infoScreen = new Information(searchResult.Result, this, productService);
+                    infoScreen.ShowDialog();
+                }
+            }
+        }
     }
 
 

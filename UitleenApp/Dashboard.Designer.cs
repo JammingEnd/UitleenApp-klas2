@@ -49,10 +49,10 @@ namespace UitleenApp
             // TB_Search
             // 
             this.TB_Search.Location = new System.Drawing.Point(987, 104);
-            this.TB_Search.Multiline = true;
             this.TB_Search.Name = "TB_Search";
-            this.TB_Search.Size = new System.Drawing.Size(212, 33);
+            this.TB_Search.Size = new System.Drawing.Size(212, 20);
             this.TB_Search.TabIndex = 0;
+            this.TB_Search.TextChanged += new System.EventHandler(this.TB_Search_TextChanged);
             // 
             // MainGrid
             // 
