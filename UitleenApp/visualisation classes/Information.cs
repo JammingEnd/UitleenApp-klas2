@@ -28,6 +28,9 @@ namespace UitleenApp.visualisation_classes
             EditStatusList.Text = item.Status;
             editProductDesc.Text = item.Description;
             editRemark.Text = item.remark;
+            BarcodeLib.Barcode b = new BarcodeLib.Barcode();
+            Image img = b.Encode(BarcodeLib.TYPE.CODE128, item.ID, Color.Black, Color.White, barcodeBox.Width, barcodeBox.Height);
+            barcodeBox.Image = img;
         }
         
         private void createProductName_TextChanged(object sender, EventArgs e)
@@ -54,10 +57,7 @@ namespace UitleenApp.visualisation_classes
             productService.UpdateProduct(newItem);
             dashboard.LoadGrid(productService.GetAllProducts());
             this.Close();
-            BarcodeLib.Barcode b = new BarcodeLib.Barcode();
-            Image img = b.Encode(BarcodeLib.TYPE.CODE128, newItem.ID, Color.Black, Color.White, barcodeBox.Width, barcodeBox.Height);
-            barcodeBox.Image = img;
-            Debug.SaveImageCapture(img);
+            
 
         }
 
@@ -68,8 +68,8 @@ namespace UitleenApp.visualisation_classes
 
         private void barcodeBox_Click(object sender, EventArgs e)
         {
-           
-            
+
+            Debug.SaveImageCapture(barcodeBox.Image);
         }
        
     }
