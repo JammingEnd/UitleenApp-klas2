@@ -40,15 +40,16 @@ namespace UitleenApp
             this.remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.btn_add = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_add = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.MainGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).BeginInit();
             this.SuspendLayout();
             // 
             // TB_Search
             // 
-            this.TB_Search.Location = new System.Drawing.Point(987, 104);
+            this.TB_Search.Location = new System.Drawing.Point(987, 120);
             this.TB_Search.Multiline = true;
             this.TB_Search.Name = "TB_Search";
             this.TB_Search.Size = new System.Drawing.Size(212, 33);
@@ -122,19 +123,6 @@ namespace UitleenApp
             this.listBox1.TabIndex = 2;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_add.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(1139, 13);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(60, 61);
-            this.btn_add.TabIndex = 3;
-            this.btn_add.Text = "+";
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UitleenApp.Properties.Resources.FC_logo_ROC_Friese_Poort;
@@ -145,6 +133,17 @@ namespace UitleenApp
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox_add
+            // 
+            this.pictureBox_add.Image = global::UitleenApp.Properties.Resources._117885;
+            this.pictureBox_add.Location = new System.Drawing.Point(1088, 12);
+            this.pictureBox_add.Name = "pictureBox_add";
+            this.pictureBox_add.Size = new System.Drawing.Size(111, 71);
+            this.pictureBox_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_add.TabIndex = 5;
+            this.pictureBox_add.TabStop = false;
+            this.pictureBox_add.Click += new System.EventHandler(this.pictureBox_add_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,8 +151,8 @@ namespace UitleenApp
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1211, 658);
+            this.Controls.Add(this.pictureBox_add);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.MainGrid);
             this.Controls.Add(this.TB_Search);
@@ -164,6 +163,7 @@ namespace UitleenApp
             this.Load += new System.EventHandler(this.Dashboard_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.MainGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,13 +176,13 @@ namespace UitleenApp
         private System.Windows.Forms.DataGridView MainGrid;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.DataGridViewTextBoxColumn remark;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_add;
     }
 }
 

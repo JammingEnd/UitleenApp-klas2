@@ -114,7 +114,11 @@ namespace UitleenApp
             LoadGrid(productService.GetAllProducts());
         }
 
-       
+        private void pictureBox_add_Click(object sender, EventArgs e)
+        {
+            addScreen = new AddScreen(productService, this);
+            addScreen.ShowDialog();
+        }
     }
 
 
