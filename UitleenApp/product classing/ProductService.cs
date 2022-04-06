@@ -60,6 +60,13 @@ namespace UitleenApp.product_classing
             DummyDB.productsFromDB.Add(item);
         }
 
+        public void Deleteproduct(string ID)
+        {
+            DummyDB.productsFromDB.Remove(DummyDB.productsFromDB.AsEnumerable().Where(product => product.ID.Contains(ID)).FirstOrDefault());
+           
+
+        }
+
         public void IniDB()
         {
             DummyDB dummy = new DummyDB();

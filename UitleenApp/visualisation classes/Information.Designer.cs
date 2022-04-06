@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.Print = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
@@ -44,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.EditProductName = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Print)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barcodeBox)).BeginInit();
@@ -54,6 +55,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.Print);
             this.panel1.Controls.Add(this.label5);
@@ -74,6 +76,16 @@
             this.panel1.Size = new System.Drawing.Size(747, 478);
             this.panel1.TabIndex = 3;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(565, 388);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(138, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Print Barcode";
+            // 
             // Print
             // 
             this.Print.Image = global::UitleenApp.Properties.Resources._3022251;
@@ -91,7 +103,7 @@
             this.label5.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(123, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 16);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 13;
             this.label5.Text = "Naam:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -126,6 +138,7 @@
             this.createProductCancelBtn.TabIndex = 10;
             this.createProductCancelBtn.Text = "Verwijderen";
             this.createProductCancelBtn.UseVisualStyleBackColor = false;
+            this.createProductCancelBtn.Click += new System.EventHandler(this.createProductCancelBtn_Click);
             // 
             // editProductCategory
             // 
@@ -172,7 +185,7 @@
             this.label4.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Categorie:";
             // 
@@ -182,7 +195,7 @@
             this.label3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 16);
+            this.label3.Size = new System.Drawing.Size(138, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Beschrijving:";
             // 
@@ -192,7 +205,7 @@
             this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 16);
+            this.label2.Size = new System.Drawing.Size(128, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Opmerkingen:";
             // 
@@ -202,7 +215,7 @@
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status:";
             // 
@@ -225,15 +238,16 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(565, 388);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 16);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Print Barcode";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(565, 179);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Click to save";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Information
             // 
@@ -273,5 +287,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox Print;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

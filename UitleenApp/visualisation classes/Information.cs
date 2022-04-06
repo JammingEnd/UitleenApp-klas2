@@ -18,7 +18,6 @@ namespace UitleenApp.visualisation_classes
         private Dashboard dashboard;
         private ProductService productService;
         private Product product;
-        private object e;
 
         public Information(Product item, Dashboard _dashboard, ProductService service)
         {
@@ -96,6 +95,14 @@ namespace UitleenApp.visualisation_classes
             bm.Dispose();
         }
 
-      
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createProductCancelBtn_Click(object sender, EventArgs e)
+        {
+            productService.Deleteproduct(product.ID);
+        }
     }
 }
