@@ -42,6 +42,7 @@ namespace UitleenApp.visualisation_classes
             this.label1 = new System.Windows.Forms.Label();
             this.createProductName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace UitleenApp.visualisation_classes
             // 
             this.createProductCancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(45)))), ((int)(((byte)(31)))));
             this.createProductCancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(45)))), ((int)(((byte)(31)))));
-            this.createProductCancelBtn.Location = new System.Drawing.Point(21, 434);
+            this.createProductCancelBtn.Location = new System.Drawing.Point(270, 434);
             this.createProductCancelBtn.Name = "createProductCancelBtn";
             this.createProductCancelBtn.Size = new System.Drawing.Size(114, 32);
             this.createProductCancelBtn.TabIndex = 10;
@@ -83,7 +84,7 @@ namespace UitleenApp.visualisation_classes
             this.createProductConfirmBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(241)))), ((int)(((byte)(151)))));
             this.createProductConfirmBtn.FlatAppearance.BorderSize = 4;
             this.createProductConfirmBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.createProductConfirmBtn.Location = new System.Drawing.Point(335, 434);
+            this.createProductConfirmBtn.Location = new System.Drawing.Point(407, 434);
             this.createProductConfirmBtn.Name = "createProductConfirmBtn";
             this.createProductConfirmBtn.Size = new System.Drawing.Size(114, 32);
             this.createProductConfirmBtn.TabIndex = 9;
@@ -136,7 +137,7 @@ namespace UitleenApp.visualisation_classes
             this.label4.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 16);
+            this.label4.Size = new System.Drawing.Size(107, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Categorie:";
             // 
@@ -146,7 +147,7 @@ namespace UitleenApp.visualisation_classes
             this.label3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 16);
+            this.label3.Size = new System.Drawing.Size(137, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Beschrijving:";
             // 
@@ -156,7 +157,7 @@ namespace UitleenApp.visualisation_classes
             this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 16);
+            this.label2.Size = new System.Drawing.Size(127, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Opmerkingen:";
             // 
@@ -166,7 +167,7 @@ namespace UitleenApp.visualisation_classes
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status:";
             // 
@@ -182,12 +183,22 @@ namespace UitleenApp.visualisation_classes
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UitleenApp.Properties.Resources.FC_logo_ROC_Friese_Poort;
-            this.pictureBox1.Location = new System.Drawing.Point(456, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(469, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(279, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(482, 142);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(250, 24);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Prodcut Aanmaken";
             // 
             // AddScreen
             // 
@@ -195,6 +206,7 @@ namespace UitleenApp.visualisation_classes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1203, 796);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddScreen";
@@ -204,6 +216,7 @@ namespace UitleenApp.visualisation_classes
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -222,5 +235,6 @@ namespace UitleenApp.visualisation_classes
         private System.Windows.Forms.ComboBox createStatusList;
         private System.Windows.Forms.Button createProductCancelBtn;
         private System.Windows.Forms.Button createProductConfirmBtn;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -22,6 +22,7 @@ namespace UitleenApp.visualisation_classes
         public Information(Product item, Dashboard _dashboard, ProductService service)
         {
             InitializeComponent();
+            panelDelete.Hide();
             product = item;
             dashboard = _dashboard;
             productService = service;
@@ -102,9 +103,23 @@ namespace UitleenApp.visualisation_classes
 
         private void createProductCancelBtn_Click(object sender, EventArgs e)
         {
+            panelDelete.Show();
+        }
+
+      
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          
+            panelDelete.Hide();
+        }
+
+        private void buttondeletefr_Click(object sender, EventArgs e)
+        {
             productService.Deleteproduct(product.ID);
             dashboard.LoadGrid(productService.GetAllProducts());
-            
+
+
             this.Close();
         }
     }
