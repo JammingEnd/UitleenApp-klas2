@@ -56,8 +56,10 @@ namespace UitleenApp.visualisation_classes
             
         }
 
-        
-        
+        private void createProductCancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

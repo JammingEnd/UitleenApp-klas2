@@ -103,6 +103,9 @@ namespace UitleenApp.visualisation_classes
         private void createProductCancelBtn_Click(object sender, EventArgs e)
         {
             productService.Deleteproduct(product.ID);
+            dashboard.LoadGrid(productService.GetAllProducts());
+            
+            this.Close();
         }
     }
 }

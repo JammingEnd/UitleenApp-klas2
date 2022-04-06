@@ -44,6 +44,7 @@ namespace UitleenApp.product_classing
             SearchResult<Product> searchResult = new SearchResult<Product>();
 
             Product GetItem = DummyDB.productsFromDB.AsEnumerable().Where(product => product.ID.Contains(ID)).FirstOrDefault();
+            Debug.Output($"found item with the name:{GetItem.Name}");
             if(GetItem == null)
             {
                 searchResult.error = $"no item found with ID: {ID}";
@@ -51,7 +52,7 @@ namespace UitleenApp.product_classing
                 return searchResult;
             }
             searchResult.Result = GetItem;
-            searchResult.error = "";
+            searchResult.error = "no error, item found";
 
             return searchResult;
         }

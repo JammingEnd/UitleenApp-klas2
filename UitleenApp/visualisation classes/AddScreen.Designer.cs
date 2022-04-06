@@ -75,6 +75,7 @@ namespace UitleenApp.visualisation_classes
             this.createProductCancelBtn.TabIndex = 10;
             this.createProductCancelBtn.Text = "Annuleren";
             this.createProductCancelBtn.UseVisualStyleBackColor = false;
+            this.createProductCancelBtn.Click += new System.EventHandler(this.createProductCancelBtn_Click);
             // 
             // createProductConfirmBtn
             // 

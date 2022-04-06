@@ -61,6 +61,7 @@ namespace UitleenApp
         public void LoadGrid(List<product_classing.Product> list)
         {
             MainGrid.Rows.Clear();
+            catergories.Clear();
             foreach (product_classing.Product item in list)
             {
                 string[] additem = new[] { item.Name, item.ID, item.Status, item.Category, item.remark };
@@ -137,7 +138,7 @@ namespace UitleenApp
                     SearchResult<Product> searchResult = new SearchResult<Product>();
 
                     searchResult = productService.GetProductByID(TB_Search.Text);
-                    if (searchResult.error != "")
+                    if (searchResult.error == "")
                     {
                         //error message
                         Debug.Output(searchResult.error);
