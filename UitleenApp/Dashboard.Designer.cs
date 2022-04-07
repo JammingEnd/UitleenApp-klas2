@@ -42,6 +42,7 @@ namespace UitleenApp
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox_add = new System.Windows.Forms.PictureBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.MainGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).BeginInit();
@@ -49,16 +50,11 @@ namespace UitleenApp
             // 
             // TB_Search
             // 
-
-            this.TB_Search.Location = new System.Drawing.Point(987, 120);
-            this.TB_Search.Multiline = true;
-
             this.TB_Search.Location = new System.Drawing.Point(987, 104);
-
+            this.TB_Search.Multiline = true;
             this.TB_Search.Name = "TB_Search";
             this.TB_Search.Size = new System.Drawing.Size(212, 20);
             this.TB_Search.TabIndex = 0;
-        
             // 
             // MainGrid
             // 
@@ -122,9 +118,9 @@ namespace UitleenApp
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(-2, 0);
+            this.listBox1.Location = new System.Drawing.Point(1, 31);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 654);
+            this.listBox1.Size = new System.Drawing.Size(120, 629);
             this.listBox1.TabIndex = 2;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -149,6 +145,18 @@ namespace UitleenApp
             this.pictureBox_add.TabStop = false;
             this.pictureBox_add.Click += new System.EventHandler(this.pictureBox_add_Click);
             // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listBox2.Font = new System.Drawing.Font("Rockwell Condensed", 15.75F, System.Drawing.FontStyle.Bold);
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 25;
+            this.listBox2.Location = new System.Drawing.Point(1, 1);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 29);
+            this.listBox2.TabIndex = 6;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,6 +164,7 @@ namespace UitleenApp
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1211, 658);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.pictureBox_add);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listBox1);
@@ -188,6 +197,7 @@ namespace UitleenApp
         private System.Windows.Forms.DataGridViewTextBoxColumn remark;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox_add;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

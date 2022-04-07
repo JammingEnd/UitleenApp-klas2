@@ -31,7 +31,13 @@ namespace UitleenApp
             FocusTextBox();
             GetEnter();
             LoadGrid(productService.GetAllProducts());
+            listBox2.ScrollAlwaysVisible = false;
+           
+            listBox2.Items.Add("Toon alles");
+            
 
+          
+         
         }
         void GetEnter()
         {
@@ -45,10 +51,12 @@ namespace UitleenApp
 
         void AddItems()
         {
+            
             listBox1.Items.Clear();
             foreach (var item in productService.GetAllProducts())
             {
                 catergories.Add(item.Category);
+               
 
             }
             catergories.Distinct().ToList();
@@ -90,17 +98,13 @@ namespace UitleenApp
 
         private void Dashboard_Load_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem == null)
-            {
-                LoadGrid(productService.GetAllProducts());
-                return;
-            }
             var selectedItem = listBox1.SelectedItem.ToString();
+            listBox2.ForeColor = Color.Black;
             List<product_classing.Product> filteredList = new List<product_classing.Product>();
             filteredList = productService.GetProductsFiltered(selectedItem);
 
@@ -151,6 +155,21 @@ namespace UitleenApp
                     infoScreen.ShowDialog();
                 }
             }
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedItem.ToString() == "Toon alles")
+            {
+                LoadGrid(productService.GetAllProducts());
+                return;
+            }
+            var selectedItem = listBox1.SelectedItem.ToString();
+            List<product_classing.Product> filteredList = new List<product_classing.Product>();
+            filteredList = productService.GetProductsFiltered(selectedItem);
+
+            Debug.Output($"filtered view, querr:{selectedItem}. items in list:{filteredList.Count}");
+            LoadGrid(filteredList);
         }
     }
 
