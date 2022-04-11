@@ -50,11 +50,12 @@ namespace UitleenApp
             // 
             // TB_Search
             // 
-            this.TB_Search.Location = new System.Drawing.Point(987, 104);
+            this.TB_Search.Location = new System.Drawing.Point(735, 121);
             this.TB_Search.Multiline = true;
             this.TB_Search.Name = "TB_Search";
             this.TB_Search.Size = new System.Drawing.Size(212, 20);
             this.TB_Search.TabIndex = 0;
+            this.TB_Search.TextChanged += new System.EventHandler(this.TB_Search_TextChanged_1);
             // 
             // MainGrid
             // 
@@ -67,10 +68,10 @@ namespace UitleenApp
             this.status,
             this.category,
             this.remark});
-            this.MainGrid.Location = new System.Drawing.Point(246, 104);
+            this.MainGrid.Location = new System.Drawing.Point(260, 158);
             this.MainGrid.Name = "MainGrid";
             this.MainGrid.ReadOnly = true;
-            this.MainGrid.Size = new System.Drawing.Size(721, 556);
+            this.MainGrid.Size = new System.Drawing.Size(721, 470);
             this.MainGrid.TabIndex = 1;
             this.MainGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MainGrid_CellDoubleClick);
             // 
@@ -137,7 +138,7 @@ namespace UitleenApp
             // pictureBox_add
             // 
             this.pictureBox_add.Image = global::UitleenApp.Properties.Resources._117885;
-            this.pictureBox_add.Location = new System.Drawing.Point(1088, 12);
+            this.pictureBox_add.Location = new System.Drawing.Point(1011, 25);
             this.pictureBox_add.Name = "pictureBox_add";
             this.pictureBox_add.Size = new System.Drawing.Size(111, 71);
             this.pictureBox_add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +164,7 @@ namespace UitleenApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1211, 658);
+            this.ClientSize = new System.Drawing.Size(1168, 658);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.pictureBox_add);
             this.Controls.Add(this.pictureBox1);
@@ -172,6 +173,7 @@ namespace UitleenApp
             this.Controls.Add(this.TB_Search);
             this.MaximumSize = new System.Drawing.Size(1227, 697);
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uileen Applicatie";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dashboard_Load_1);

@@ -171,6 +171,11 @@ namespace UitleenApp
             Debug.Output($"filtered view, querr:{selectedItem}. items in list:{filteredList.Count}");
             LoadGrid(filteredList);
         }
+
+        private void TB_Search_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

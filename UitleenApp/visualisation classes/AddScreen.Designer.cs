@@ -128,7 +128,7 @@ namespace UitleenApp.visualisation_classes
             "Niet meer leverbaar"});
             this.createStatusList.Location = new System.Drawing.Point(298, 135);
             this.createStatusList.Name = "createStatusList";
-            this.createStatusList.Size = new System.Drawing.Size(121, 21);
+            this.createStatusList.Size = new System.Drawing.Size(190, 21);
             this.createStatusList.TabIndex = 5;
             // 
             // label4
