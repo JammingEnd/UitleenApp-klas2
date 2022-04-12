@@ -23,7 +23,7 @@ namespace UitleenApp.product_classing
             List<Product> products = new List<Product>();
 
             products = DummyDB.productsFromDB;
-            products = products.AsEnumerable().Where(product => product.Category.catergory .Contains(catergory)).ToList();
+            products = products.AsEnumerable().Where(product => product.Category.catergory.Contains(catergory)).ToList();
             return products;
         }
 
