@@ -80,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api classes\ObjectConverter.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +88,7 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Debug.cs" />
+    <Compile Include="product classing\Category.cs" />
     <Compile Include="product classing\GenerateID.cs" />
     <Compile Include="product classing\Product.cs" />
     <Compile Include="product classing\ProductService.cs" />
@@ -139,9 +141,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Api classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1200px-Ic_arrow_drop_down_36px.svg.png" />
   </ItemGroup>

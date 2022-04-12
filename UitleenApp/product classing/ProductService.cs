@@ -23,9 +23,10 @@ namespace UitleenApp.product_classing
             List<Product> products = new List<Product>();
 
             products = DummyDB.productsFromDB;
-            products = products.AsEnumerable().Where(product => product.Category.Contains(catergory)).ToList();
+            products = products.AsEnumerable().Where(product => product.Category.catergory .Contains(catergory)).ToList();
             return products;
         }
+
 
         public void UpdateProduct(Product product)
         {
@@ -74,6 +75,14 @@ namespace UitleenApp.product_classing
             dummy.IniDummyBD();
         }
     }
+
+    internal class CatergoryService
+    {
+        public List<>
+
+
+    }
+
 
     internal class DummyDB
     {
