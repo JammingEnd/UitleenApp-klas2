@@ -55,7 +55,7 @@ namespace UitleenApp
             listBox1.Items.Clear();
             foreach (var item in productService.GetAllProducts())
             {
-                catergories.Add(item.Category);
+                catergories.Add(item.Category.catergory);
                
 
             }
@@ -72,7 +72,7 @@ namespace UitleenApp
             catergories.Clear();
             foreach (product_classing.Product item in list)
             {
-                string[] additem = new[] { item.Name, item.ID, item.Status, item.Category, item.remark };
+                string[] additem = new[] { item.Name, item.ID, item.Status, item.Category.catergory, item.remark };
                 MainGrid.Rows.Add(additem);
 
 

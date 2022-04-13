@@ -27,7 +27,7 @@ namespace UitleenApp.visualisation_classes
             dashboard = _dashboard;
             productService = service;
             EditProductName.Text = item.Name;
-            editProductCategory.Text = item.Category;
+            editProductCategory.Text = item.Category.catergory;
             EditStatusList.Text = item.Status;
             editProductDesc.Text = item.Description;
             editRemark.Text = item.remark;
@@ -54,7 +54,7 @@ namespace UitleenApp.visualisation_classes
             }
             newItem.Name = EditProductName.Text;
             newItem.Status = EditStatusList.Text;
-            newItem.Category = editProductCategory.Text;
+            newItem.Category.catergory = editProductCategory.Text;
             newItem.Description = editProductDesc.Text;
             newItem.remark = editRemark.Text;
             productService.UpdateProduct(newItem);

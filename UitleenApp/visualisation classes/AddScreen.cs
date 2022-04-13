@@ -43,8 +43,8 @@ namespace UitleenApp.visualisation_classes
             }
             newItem.Name = createProductName.Text;
             newItem.Status = createStatusList.Text;
-            newItem.Category = createProductCategory.Text;
-            newItem.ID = generator.GenerateIDFunc(newItem.Category, dashboard.catergories);
+            newItem.Category.catergory = createProductCategory.Text;
+            newItem.ID = generator.GenerateIDFunc(newItem.Category.catergory, dashboard.catergories);
 
             newItem.Description = createProductDesc.Text;
             newItem.remark = createRemark.Text;
