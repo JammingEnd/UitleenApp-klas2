@@ -32,6 +32,7 @@ namespace UitleenApp
             GetEnter();
             LoadGrid(productService.GetAllProducts());
             listBox2.ScrollAlwaysVisible = false;
+            panel1.Hide();
            
             listBox2.Items.Add("Toon alles");
             
@@ -175,6 +176,16 @@ namespace UitleenApp
         private void TB_Search_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            panel1.Show();
         }
     }
 

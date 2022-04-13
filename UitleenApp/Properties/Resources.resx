@@ -121,6 +121,9 @@
   <data name="117885" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\117885.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3022251" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3022251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Gbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="1200px-Ic_arrow_drop_down_36px.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1200px-Ic_arrow_drop_down_36px.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3022251" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3022251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glassmagnifiermagnifyingsearchsearchingweb_123111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glassmagnifiermagnifyingsearchsearchingweb_123111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
