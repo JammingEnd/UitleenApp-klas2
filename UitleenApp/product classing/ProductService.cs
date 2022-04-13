@@ -8,6 +8,7 @@ namespace UitleenApp.product_classing
 {
     public class ProductService
     {
+        
         public List<Product> GetAllProducts()
         {
             List<Product> products = new List<Product>();
@@ -69,6 +70,43 @@ namespace UitleenApp.product_classing
 
         }
 
+
+        //---------------------------------------------------------------
+
+
+        public List<Category> GetAllCategories()
+        {
+            List<Category> categories = new List<Category>();
+
+
+            return categories;
+        }
+        public Category GetCategoryById(int Id)
+        {
+            Category category = new Category();
+
+            return category;
+        }
+
+        public void PostCategory(string Category)
+        {
+            //post C 
+
+
+        }
+
+        public void UpdateCategory(int Id)
+        {
+            //update C
+        }
+
+        public void DeleteCategory()
+        {
+            //delete C
+        }
+
+        //---------------------------------------------------------------
+
         public void IniDB()
         {
             DummyDB dummy = new DummyDB();
@@ -76,18 +114,7 @@ namespace UitleenApp.product_classing
         }
     }
 
-    internal class CatergoryService
-    {
-        public List<Category> categories()
-        {
-            List<Category> categories = new List<Category>();
-
-
-            return categories;
-        }
-
-
-    }
+    
 
 
     internal class DummyDB

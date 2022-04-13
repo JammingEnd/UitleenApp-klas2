@@ -32,7 +32,6 @@ namespace UitleenApp.visualisation_classes
             this.panel1 = new System.Windows.Forms.Panel();
             this.createProductCancelBtn = new System.Windows.Forms.Button();
             this.createProductConfirmBtn = new System.Windows.Forms.Button();
-            this.createProductCategory = new System.Windows.Forms.TextBox();
             this.createProductDesc = new System.Windows.Forms.TextBox();
             this.createRemark = new System.Windows.Forms.TextBox();
             this.createStatusList = new System.Windows.Forms.ComboBox();
@@ -43,16 +42,22 @@ namespace UitleenApp.visualisation_classes
             this.createProductName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.CateComboBox = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.CategoryAddBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.CategoryAddBox);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.CateComboBox);
             this.panel1.Controls.Add(this.createProductCancelBtn);
             this.panel1.Controls.Add(this.createProductConfirmBtn);
-            this.panel1.Controls.Add(this.createProductCategory);
             this.panel1.Controls.Add(this.createProductDesc);
             this.panel1.Controls.Add(this.createRemark);
             this.panel1.Controls.Add(this.createStatusList);
@@ -92,14 +97,6 @@ namespace UitleenApp.visualisation_classes
             this.createProductConfirmBtn.UseVisualStyleBackColor = false;
             this.createProductConfirmBtn.Click += new System.EventHandler(this.createProductConfirmBtn_Click);
             // 
-            // createProductCategory
-            // 
-            this.createProductCategory.Location = new System.Drawing.Point(298, 173);
-            this.createProductCategory.Multiline = true;
-            this.createProductCategory.Name = "createProductCategory";
-            this.createProductCategory.Size = new System.Drawing.Size(190, 22);
-            this.createProductCategory.TabIndex = 8;
-            // 
             // createProductDesc
             // 
             this.createProductDesc.Location = new System.Drawing.Point(298, 217);
@@ -137,7 +134,7 @@ namespace UitleenApp.visualisation_classes
             this.label4.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Categorie:";
             // 
@@ -147,7 +144,7 @@ namespace UitleenApp.visualisation_classes
             this.label3.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 16);
+            this.label3.Size = new System.Drawing.Size(138, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Beschrijving:";
             // 
@@ -157,7 +154,7 @@ namespace UitleenApp.visualisation_classes
             this.label2.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 16);
+            this.label2.Size = new System.Drawing.Size(128, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Opmerkingen:";
             // 
@@ -167,16 +164,15 @@ namespace UitleenApp.visualisation_classes
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(123, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status:";
             // 
             // createProductName
             // 
             this.createProductName.Location = new System.Drawing.Point(283, 20);
-            this.createProductName.Multiline = true;
             this.createProductName.Name = "createProductName";
-            this.createProductName.Size = new System.Drawing.Size(205, 28);
+            this.createProductName.Size = new System.Drawing.Size(205, 20);
             this.createProductName.TabIndex = 0;
             this.createProductName.Text = "Vul hier de naam in:";
             // 
@@ -200,6 +196,35 @@ namespace UitleenApp.visualisation_classes
             this.label9.TabIndex = 18;
             this.label9.Text = "Prodcut Aanmaken";
             // 
+            // CateComboBox
+            // 
+            this.CateComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.CateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CateComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CateComboBox.FormattingEnabled = true;
+            this.CateComboBox.Location = new System.Drawing.Point(298, 179);
+            this.CateComboBox.Name = "CateComboBox";
+            this.CateComboBox.Size = new System.Drawing.Size(190, 21);
+            this.CateComboBox.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::UitleenApp.Properties.Resources._117885;
+            this.pictureBox2.Location = new System.Drawing.Point(495, 180);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // CategoryAddBox
+            // 
+            this.CategoryAddBox.Location = new System.Drawing.Point(298, 180);
+            this.CategoryAddBox.Name = "CategoryAddBox";
+            this.CategoryAddBox.Size = new System.Drawing.Size(190, 20);
+            this.CategoryAddBox.TabIndex = 13;
+            // 
             // AddScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +240,7 @@ namespace UitleenApp.visualisation_classes
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,12 +255,14 @@ namespace UitleenApp.visualisation_classes
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox createProductName;
-        private System.Windows.Forms.TextBox createProductCategory;
         private System.Windows.Forms.TextBox createProductDesc;
         private System.Windows.Forms.TextBox createRemark;
         private System.Windows.Forms.ComboBox createStatusList;
         private System.Windows.Forms.Button createProductCancelBtn;
         private System.Windows.Forms.Button createProductConfirmBtn;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox CateComboBox;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox CategoryAddBox;
     }
 }

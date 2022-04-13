@@ -75,3 +75,4 @@ D:\source\repos\JammingEnd\UitleenApp-klas2\UitleenApp\bin\Debug\System.Text.Jso
 D:\source\repos\JammingEnd\UitleenApp-klas2\UitleenApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\source\repos\JammingEnd\UitleenApp-klas2\UitleenApp\bin\Debug\System.ValueTuple.xml
 D:\source\repos\JammingEnd\UitleenApp-klas2\UitleenApp\obj\Debug\UitleenApp.csproj.CopyComplete
+C:\Users\jaime\source\repos\UitleenApp-klas2\UitleenApp\obj\Debug\UitleenApp.csprojAssemblyReference.cache

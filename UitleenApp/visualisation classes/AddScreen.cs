@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UitleenApp.product_classing;
 
+
+
 namespace UitleenApp.visualisation_classes
 {
     public partial class AddScreen : Form
@@ -23,12 +25,20 @@ namespace UitleenApp.visualisation_classes
             dashboard = dashboarditem;
             generator = new GenerateID(item);
             InitializeComponent();
+            CategoryAddBox.Visible = false;
+            LoadComboBox();
+            
         }
-
-        private void AddScreen_Load(object sender, EventArgs e)
+        void LoadComboBox()
         {
-
+            foreach (Category item in productService.GetAllCategories())
+            {
+                CateComboBox.Items.Add(item.catergory);
+                Debug.Output(item.catergory);
+            }
         }
+     
+        
 
         private void createProductConfirmBtn_Click(object sender, EventArgs e)
         {
@@ -43,7 +53,17 @@ namespace UitleenApp.visualisation_classes
             }
             newItem.Name = createProductName.Text;
             newItem.Status = createStatusList.Text;
-            newItem.Category.catergory = createProductCategory.Text;
+            if(CateComboBox.Visible != false)
+            {
+                newItem.Category.catergory = CateComboBox.Text;
+
+            }
+            else
+            {
+                newItem.Category.catergory = CategoryAddBox.Text;
+
+            }
+
             newItem.ID = generator.GenerateIDFunc(newItem.Category.catergory, dashboard.catergories);
 
             newItem.Description = createProductDesc.Text;
@@ -59,6 +79,15 @@ namespace UitleenApp.visualisation_classes
         private void createProductCancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            //CateComboBox.Visible.SwitchBool
+            CateComboBox.Visible = !CateComboBox.Visible;
+
+
+            CategoryAddBox.Visible = !CategoryAddBox.Visible;
         }
     }
 
