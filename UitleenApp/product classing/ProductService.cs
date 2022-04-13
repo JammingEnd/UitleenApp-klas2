@@ -18,12 +18,12 @@ namespace UitleenApp.product_classing
 
         }
 
-        public List<Product> GetProductsFiltered(string catergory)
+        public List<Product> GetProductsFiltered(string categoryRes)
         {
             List<Product> products = new List<Product>();
 
             products = DummyDB.productsFromDB;
-            products = products.AsEnumerable().Where(product => product.Category.catergory.Contains(catergory)).ToList();
+            products = products.AsEnumerable().Where(product => product.Category.catergory.Contains(categoryRes)).ToList();
             return products;
         }
 
@@ -78,7 +78,13 @@ namespace UitleenApp.product_classing
 
     internal class CatergoryService
     {
-        public List<>
+        public List<Category> categories()
+        {
+            List<Category> categories = new List<Category>();
+
+
+            return categories;
+        }
 
 
     }
@@ -137,7 +143,9 @@ namespace UitleenApp.product_classing
         }
         void AssignProduct(Product item, int Index)
         {
-            item.Category = Catergies[Index];
+            Category cat = new Category();
+            cat.catergory = Catergies[Index];
+            item.Category = cat;
 
             item.ID = $"{IDs[Index]}{productIndexing[Index]}";
             item.Description = nullFilling;

@@ -10,7 +10,7 @@ namespace UitleenApp.product_classing
 
         public string Status { get; set; }
        
-        
+        public Category Category { get; set; }
 
         public string Description { get; set; }
 
