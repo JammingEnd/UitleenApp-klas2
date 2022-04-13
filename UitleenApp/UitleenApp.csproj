@@ -141,7 +141,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\glassmagnifiermagnifyingsearchsearchingweb_123111.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1200px-Ic_arrow_drop_down_36px.svg.png" />
   </ItemGroup>

@@ -129,5 +129,15 @@ namespace UitleenApp.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap glassmagnifiermagnifyingsearchsearchingweb_123111 {
+            get {
+                object obj = ResourceManager.GetObject("glassmagnifiermagnifyingsearchsearchingweb_123111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
